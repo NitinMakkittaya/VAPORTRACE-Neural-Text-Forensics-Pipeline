@@ -1,0 +1,168 @@
+:root {
+    --bg-base: #050505;
+    --bg-surface: #121212;
+    --border-dim: #2a2a2a;
+    --accent-red: #ff2a2a;
+    --text-main: #e0e0e0;
+    --text-dim: #666;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Custom Dark Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--border-dim); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+.container { display: flex; height: 100vh; }
+
+.sidebar {
+    width: 350px;
+    background-color: var(--bg-surface);
+    border-right: 1px solid var(--border-dim);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 10;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.8);
+    overflow-y: auto;
+}
+
+h1.glitch {
+    color: var(--text-main);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+/* Form & Input Layout */
+form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.5rem; 
+}
+
+label {
+    color: var(--text-dim); 
+    font-size: 0.8rem; 
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+textarea {
+    background: #0a0a0a;
+    border: 1px solid var(--border-dim);
+    color: var(--text-main);
+    padding: 1rem;
+    height: 150px;
+    resize: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+textarea:focus { 
+    outline: none; 
+    border-color: var(--accent-red); 
+    box-shadow: 0 0 8px rgba(255, 42, 42, 0.3); 
+}
+
+input[type="file"] { 
+    color: var(--text-dim); 
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: #0a0a0a;
+    border: 1px dashed var(--border-dim);
+    cursor: pointer;
+}
+
+button {
+    background: transparent;
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+}
+
+button:hover { 
+    background: var(--accent-red); 
+    color: #000; 
+    box-shadow: 0 0 15px var(--accent-red); 
+}
+
+.network-view { 
+    flex-grow: 1; 
+    position: relative; 
+    background: radial-gradient(circle at center, #111 0%, #000 100%); 
+}
+
+#mynetwork { 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* Agentic Reasoning Inspector Panel */
+#inspector-panel {
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    width: 350px;
+    background: rgba(18, 18, 18, 0.95);
+    border: 1px solid var(--border-dim);
+    padding: 1.5rem;
+    box-shadow: -5px 5px 25px rgba(0,0,0,0.9);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+}
+
+#inspector-panel.hidden { 
+    opacity: 0; 
+    pointer-events: none; 
+    transform: translateX(30px); 
+}
+
+#inspector-panel h3 { 
+    color: var(--accent-red); 
+    margin-bottom: 1rem; 
+    letter-spacing: 2px; 
+    font-size: 1rem; 
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-dim);
+    padding-bottom: 0.5rem;
+}
+
+.report-box { 
+    background: #2a0a0a; 
+    color: #ff8888; 
+    padding: 1rem; 
+    border-left: 3px solid var(--accent-red); 
+    font-size: 0.9rem; 
+    margin-bottom: 1rem; 
+    font-weight: bold;
+}
+
+.text-box { 
+    color: var(--text-dim); 
+    font-size: 0.85rem; 
+    line-height: 1.5; 
+    background: #0a0a0a;
+    padding: 1rem;
+    border: 1px solid var(--border-dim);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VAPORTRACE // Advanced Forensics</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="glitch">VAPORTRACE</h1>
+            
+            <form id="upload-form">
+                <label>Original Asset (Text or PDF)</label>
+                <textarea id="orig_text" name="orig_text" placeholder="Paste baseline text..."></textarea>
+                <input type="file" id="orig_pdf" name="orig_pdf" accept="application/pdf">
+                
+                <label>Questioned Asset (Text or PDF)</label>
+                <textarea id="mod_text" name="mod_text" placeholder="Paste questionable text..."></textarea>
+                <input type="file" id="mod_pdf" name="mod_pdf" accept="application/pdf">
+                
+                <button type="submit" id="scan-btn">EXECUTE FORENSICS</button>
+            </form>
+        </aside>
+        
+        <main class="network-view">
+            <div id="mynetwork"></div>
+            
+            <div id="inspector-panel" class="hidden">
+                <h3>NODE INSPECTOR</h3>
+                <div class="report-box" id="report-content">Select a node for forensic analysis.</div>
+                <div class="text-box" id="node-text"></div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
