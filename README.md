@@ -373,29 +373,3 @@ git push origin feature/new-feature
 5. Open a Pull Request
 
 ---
-
-# 📜 License
-
-This project is licensed under the MIT License.
-
----
-
-# 👨‍💻 Author
-
-**Nitin**
-
-Computer Science & Design Student
-
-Passionate about:
-
-- Artificial Intelligence
-- Machine Learning
-- Computer Vision
-- UI/UX Design
-- Visual Effects
-- Game Development
-- Interactive Web Technologies
-
----
-
-## ⭐ If you found this project interesting, consider giving it a Star!
